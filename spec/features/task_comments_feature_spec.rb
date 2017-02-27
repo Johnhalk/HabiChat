@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature '#TaskComments' do
+feature '#TaskComments.' do
   # User Story Two
   # As a Group Member,
   # So that I can discuss tasks,
