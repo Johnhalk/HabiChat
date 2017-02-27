@@ -18,6 +18,7 @@ feature '#Calender.' do
       fill_in 'Description', with: 'Wash dishes'
       check 'Super urgent'
       click_button 'Add task'
+      click_button 'Add to calender'
       visit '/calender'
       expect(page).to have_content 'Wash dishes'
     end
