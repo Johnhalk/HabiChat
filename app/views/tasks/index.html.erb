@@ -1,27 +1,39 @@
 
 <% if @tasks.any? %>
- <% @tasks.each do |task| %>
-   <h2><%= task.description %></h2>
-   <h2>
-     <% if task.priority=='1'%>
-     <%= 'Not that urgent' %>
-     <% elsif task.priority=='2'%>
-     <%= 'Quite urgent' %>
-     <% else%>
-     <%= 'Super urgent' %>
-     <% end%>
-   </h2>
-   <h2> <%= task.status %> </h2>
+  <% @tasks.each do |task| %>
+    <h2><%= task.description %></h2>
+    <h2>
+       <% if task.priority=='1'%>
+         <%= 'Not that urgent' %>
+         <% elsif task.priority=='2'%>
+         <%= 'Quite urgent' %>
+         <% else %>
+         <%= 'Super urgent' %>
+       <% end %>
+    </h2>
+    <h2> <%= task.status %> </h2>
 
- <% end %>
+    <% if task.comments.any?  %>
+      <% task.comments.all.each do |comment| %>
+        <h2><%= comment.comments %></h2>
+      <% end %>
+    <% end %>
+
+      <%= form_for [task, task.comments.new] do |t| %>
+      <%= t.label :comment %>
+      <%= t.text_field :comments %>
+      <%= t.submit 'Add comment' %>
+    <% end %>
+    <% end %>
 <% else %>
- <h1>No tasks were created yet</h1>
+  <h1>No tasks were created yet</h1>
 <% end %>
 
-<%= form_for Task.new do |f| %>
- <%= f.label :description  %>
- <%= f.text_field :description %>
- <%= f.label :priority  %>
- <%= f.select :priority, (1..3) %>
- <%= f.submit 'Add task'%>
+
+  <%= form_for Task.new do |f| %>
+   <%= f.label :description  %>
+   <%= f.text_field :description %>
+   <%= f.label :priority  %>
+   <%= f.select :priority, (1..3) %>
+   <%= f.submit 'Add task'%>
 <% end %>

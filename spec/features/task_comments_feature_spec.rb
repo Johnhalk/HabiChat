@@ -12,9 +12,10 @@ feature '#TaskComments.' do
       fill_in 'Description', with: 'Wash dishes'
       select '3', from: 'Priority'
       click_button 'Add task'
-      # fill_in 'Comment', with: 'Test comment'
-      # click_button 'Add comment'
-      # expect(page).to have_content 'Test comment'
+      save_and_open_page
+      fill_in 'comment[comments]', with: 'Test comment'
+      click_button 'Add comment'
+      expect(page).to have_content 'Test comment'
     end
     # scenario 'as a not signed up person I can not add a comment to a task' do
     #   visit tasks_path
