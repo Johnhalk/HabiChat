@@ -1,5 +1,14 @@
-<%= month_calendar do |date| %>
+
+<%= month_calendar events: @events do |date, events| %>
   <%= date.day %>
+
+  <% events.each do |event| %>
+    <div>
+      <%= Task.find(event.task_id).description %>
+      <%= Task.find(event.task_id).created_at %>
+    </div>
+  <% end %>
 <% end %>
+
 
 No tasks were created yet

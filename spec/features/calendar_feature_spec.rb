@@ -33,13 +33,13 @@ feature '#Calendar.' do
       expect(page).to have_content '28'
     end
   end
-  # User Story Five. 
+  # User Story Five.
   # As a Group Member,
   # So that group can see my task in the Calendar,
   # I would like to be able to add task to the Calendar
   context 'Displays task if exists:' do
     scenario 'I can create a task and see it in the calendar' do
-      # sign_up
+      sign_up
       visit tasks_path
       fill_in 'Description', with: 'Wash dishes'
       select '3', from: 'Priority'

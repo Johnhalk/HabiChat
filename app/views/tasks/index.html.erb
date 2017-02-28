@@ -13,8 +13,14 @@
     </h2>
     <h2> <%= task.status %> </h2>
     <%= form_for [task] do |r| %>
-    <%= r.submit 'Change status' %>
+      <%= r.submit 'Change status' %>
     <% end %>
+
+    <%= form_tag(controller: "tasks", action: "calendar", method: "post") do%>
+      <%= hidden_field_tag 't_id', task.id %>
+      <%= submit_tag 'Add to calendar', data: {id: "#{task.id}"} %>
+    <% end %>
+
       <% if task.user == current_user %>
         <%= link_to image_tag("trash.png", class: "trash"), task_path(task), method: :delete, class: 'remove' %>
       <% end %>
@@ -26,10 +32,10 @@
     <% end %>
 
       <%= form_for [task, task.comments.new] do |t| %>
-      <%= t.label :comment %>
-      <%= t.text_field :comments %>
-      <%= t.submit 'Add comment' %>
-    <% end %>
+        <%= t.label :comment %>
+        <%= t.text_field :comments %>
+        <%= t.submit 'Add comment' %>
+      <% end %>
     <% end %>
 <% else %>
   <h1>No tasks were created yet</h1>

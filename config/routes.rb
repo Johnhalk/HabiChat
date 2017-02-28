@@ -9,5 +9,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :events
   get '/calendar' => 'users#calendar', as: 'calendar'
+  post '/calendar' => 'tasks#calendar'
+
 end
