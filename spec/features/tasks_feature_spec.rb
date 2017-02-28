@@ -22,7 +22,7 @@ feature '#Tasks.' do
       click_button 'Add task'
       expect(page).to have_content 'Wash dishes'
       expect(page).to have_content 'Super urgent'
-      expect(page).to have_content 'Just created'
+      expect(page).to have_content 'In progress'
     end
     scenario 'as a not signed up person I can not create a task' do
       visit tasks_path
@@ -36,7 +36,7 @@ feature '#Tasks.' do
       select '3', from: 'Priority'
       click_button 'Add task'
       expect(page).not_to have_content 'Super urgent'
-      expect(page).not_to have_content 'Just created'
+      expect(page).not_to have_content 'In progress'
       expect(page).to have_content 'A task must have a description'
     end
   end

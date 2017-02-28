@@ -12,6 +12,12 @@
        <% end %>
     </h2>
     <h2> <%= task.status %> </h2>
+    <%= form_for [task] do |r| %>
+    <%= r.submit 'Change status' %>
+    <% end %>
+      <% if task.user == current_user %>
+        <%= link_to image_tag("trash.png", class: "trash"), task_path(task), method: :delete, class: 'remove' %>
+      <% end %>
 
     <% if task.comments.any?  %>
       <% task.comments.all.each do |comment| %>
