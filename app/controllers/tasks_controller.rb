@@ -9,8 +9,12 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     @task.status = 'Just created'
-    @task.save
-    redirect_to tasks_path
+    if @task.save
+      redirect_to tasks_path
+    else
+      flash[:alert] = "A task must have a description"
+      redirect_to tasks_path
+    end
   end
 
   private

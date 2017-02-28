@@ -7,8 +7,13 @@ class CommentsController < ApplicationController
 
   def create
     @task = Task.find(params[:task_id])
-    @task.comments.create(comment_params)
-    redirect_to tasks_path
+    @comment = @task.comments.new(comment_params)
+    if @comment.save
+      redirect_to tasks_path
+    else
+      flash[:alert] = "A comment must have text"
+      redirect_to tasks_path
+    end
   end
 
 

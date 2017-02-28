@@ -21,5 +21,14 @@ feature '#TaskComments.' do
     #   visit tasks_path
     #   expect(page).not_to have_button 'Add comment'
     # end
+
+    scenario 'does not let you submit a comment with no text' do
+      visit tasks_path
+      fill_in 'Description', with: 'Wash dishes'
+      select '3', from: 'Priority'
+      click_button 'Add task'
+      click_button 'Add comment'
+      expect(page).to have_content 'A comment must have text'
+    end
   end
 end

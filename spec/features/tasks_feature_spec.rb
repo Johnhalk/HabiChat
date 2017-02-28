@@ -27,5 +27,14 @@ feature '#Tasks.' do
     #   visit tasks_path
     #   expect(page).not_to have_button 'Add task'
     # end
+
+    scenario 'does not let you submit a task without a description' do
+      visit tasks_path
+      select '3', from: 'Priority'
+      click_button 'Add task'
+      expect(page).not_to have_content 'Super urgent'
+      expect(page).not_to have_content 'Just created'
+      expect(page).to have_content 'A task must have a description'
+    end
   end
 end
