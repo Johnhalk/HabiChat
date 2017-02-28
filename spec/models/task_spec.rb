@@ -12,4 +12,11 @@ RSpec.describe Task, type: :model do
       expect(task).to have(1).error_on(:priority)
     end
   end
+
+  context 'associations' do
+    it 'should belong to a user and have many comments'do
+      should belong_to(:user)
+      should have_many(:comments)
+    end
+  end
 end

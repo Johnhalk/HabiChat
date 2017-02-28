@@ -7,6 +7,7 @@ feature '#Tasks.' do
   # I would like to be able to add a task
   context 'No tasks added:' do
     scenario 'should display a prompt to add a task' do
+      sign_up
       visit tasks_path
       expect(page).to have_content 'No tasks were created yet'
       expect(page).to have_button 'Add task'
@@ -14,7 +15,7 @@ feature '#Tasks.' do
   end
   context 'Adding a task:' do
     scenario 'as a signed up user, I can create a task and see it on the page' do
-      # sign_up
+      sign_up
       visit tasks_path
       fill_in 'Description', with: 'Wash dishes'
       select '3', from: 'Priority'
@@ -23,12 +24,14 @@ feature '#Tasks.' do
       expect(page).to have_content 'Super urgent'
       expect(page).to have_content 'Just created'
     end
-    # scenario 'as a not signed up person I can not create a task' do
-    #   visit tasks_path
-    #   expect(page).not_to have_button 'Add task'
-    # end
+    scenario 'as a not signed up person I can not create a task' do
+      visit tasks_path
+      click_button 'Add task'
+      expect(page).to have_content 'You need to sign in or sign up before continuing.'
+    end
 
     scenario 'does not let you submit a task without a description' do
+      sign_up
       visit tasks_path
       select '3', from: 'Priority'
       click_button 'Add task'

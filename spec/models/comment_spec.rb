@@ -8,4 +8,10 @@ RSpec.describe Comment, type: :model do
       expect(comment).to have(1).error_on(:comments)
     end
   end
+  context 'associations' do
+    it 'should belong to a user and belong to a task'do
+      should belong_to(:user)
+      should belong_to(:task)
+    end
+  end
 end
