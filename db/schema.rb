@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170227180126) do
+ActiveRecord::Schema.define(version: 20170228113944) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(version: 20170227180126) do
     t.text     "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "task_id"
+    t.integer  "user_id"
+    t.index ["task_id"], name: "index_comments_on_task_id", using: :btree
+    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -27,6 +31,10 @@ ActiveRecord::Schema.define(version: 20170227180126) do
     t.integer  "priority"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "comment_id"
+    t.integer  "user_id"
+    t.index ["comment_id"], name: "index_tasks_on_comment_id", using: :btree
+    t.index ["user_id"], name: "index_tasks_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -46,4 +54,8 @@ ActiveRecord::Schema.define(version: 20170227180126) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "comments", "tasks"
+  add_foreign_key "comments", "users"
+  add_foreign_key "tasks", "comments"
+  add_foreign_key "tasks", "users"
 end
