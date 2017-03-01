@@ -51,10 +51,11 @@
                   <h3 class="name"><%= task.user.email.split("@")[0]%></h3>
                   <p class="profession"><%= task.description %></p>
                   <p class="text-center">
-                    <% if task.priority=='1'%>
-                      <%= 'Priority: Not that urgent' %>
-                    <% elsif task.priority=='2'%>
-                      <%= 'Priority: Quite urgent' %>
+
+                    <% if task.priority==1%>
+                      <%= 'Not that urgent' %>
+                    <% elsif task.priority==2%>
+                      <%= 'Quite urgent' %>
                     <% else %>
                       <%= 'Priority: Super urgent' %>
                     <% end %></p>
@@ -104,10 +105,10 @@
                      </div> <!-- This closes main -->
                  </div>  <!-- This closes content -->
              </div> <!-- This closes back -->
+
           </div> <!-- This closes card -->
     </div> <!-- This closes card deck -->
   </div>
-
     <% end %> <!-- This closes iterator -->
   </div> <!-- This closes row -->
 
