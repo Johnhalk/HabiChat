@@ -71,12 +71,14 @@
                <div class="content">
                    <div class="main">
                      <div class="all_comments">
-               <% if task.comments.any?  %>
-                 <% task.comments.all.each do |comment| %>
+                         <% if task.comments.any?  %>
+                           <% task.comments.all.each do |comment| %>
 
-                         <h4 class="text-center"><span class="profession"> <%= task.user.email.split("@")[0]%></span> <%= +": "+comment.comments %></h4>
-                         <% end %>
-                       <% end %>
+                                   <h4 class="text-center"><span class="profession"> <%= task.user.email.split("@")[0]%></span> <%= +": "+comment.comments %></h4>
+                                   <% end %>
+                          <% else%>
+                            <span class="no_comments">No Comments Yet</span>
+                          <% end %>
                      </div>
                        <div class="stats-container">
                          <%= form_for [task, task.comments.new] do |t| %>
