@@ -10,7 +10,6 @@ class MessagesController < ApplicationController
     message = Message.new(message_params)
     message.user_id = current_user.id
     if message.save
-      message.user.username = "John"
       ActionCable.server.broadcast 'messages',
         message: message.content,
         user: message.user.username

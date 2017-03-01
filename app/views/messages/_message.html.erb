@@ -1,4 +1,2 @@
-<% @chat.messages.each do |message| %>
-  <%= message.content %>
-  </br>
-<% end %>
+<b><%= message.user.username %></b>: <%= message.content %>
+</br>
