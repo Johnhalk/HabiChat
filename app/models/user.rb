@@ -4,8 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  # attr_accessor :username
+
   has_many :tasks, dependent: :destroy
   has_many :comments
   has_many :commented_tasks, through: :comments, source: :task
-  
+  has_many :messages
+
+  validates :username, presence: true, uniqueness: true
+
 end
