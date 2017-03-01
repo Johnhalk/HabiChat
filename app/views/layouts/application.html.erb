@@ -7,6 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track': true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= action_cable_meta_tag %>
     <link href="https://fonts.googleapis.com/css?family=Amiko" rel="stylesheet">
   </head>
 
@@ -42,7 +43,9 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
+    <% if user_signed_in? %>
+      <h3>Welcome <%= current_user.username %>!</h3>
+    <% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
