@@ -118,10 +118,10 @@ body, html {
 }
 
 .logo {
-  max-height: 60px;
+  max-height: 250px;
   padding: 0;
-  width: 60px;
-  height: 60px;
+  width: 280px;
+  height: 100px;
 }
 
 .brand-name{
