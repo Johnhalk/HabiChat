@@ -268,14 +268,7 @@ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
     font-size: 40px;
     margin-bottom: 20px;
 }
-/*.card .footer {
-    border-top: 1px solid #EEEEEE;
-    color: #999999;
-    margin: 30px 0 0;
-    padding: 10px 0 0;
-    text-align: center;
 
-}*/
 .card .footer .social-links{
     font-size: 18px;
 }
@@ -351,98 +344,36 @@ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
   color: grey;
 }
 
+.simple-calendar{
+  font-family: 'Cabin Sketch', cursive;
 
-/*      Just for presentation        */
-/*.title{
-    color: #506A85;
-    text-align: center;
-    font-weight: 300;
-    font-size: 44px;
-    margin-bottom: 90px;
-    line-height: 90%;
 }
-.title small{
-    font-size: 17px;
-    color: #999;
-    text-transform: uppercase;
-    margin: 0;
+
+.no_tasks_yet{
+  font-family: 'Cabin Sketch', cursive;
+  color: red;
+  text-align: center;
+  font-size: 30px;
 }
-.space-30{
-    height: 30px;
-    display: block;
+
+.calendar-heading{
+  text-align: center;
 }
-.space-50{
-    height: 50px;
-    display: block;
+.calendar-title{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 40px;
 }
-.space-200{
-    height: 200px;
-    display: block;
+
+.table_day_header{
+  text-align: center !important;
+  border-bottom-width: 5px !important;
+  border-bottom-color: black !important;
+
+
 }
-.white-board{
-    background-color: #FFFFFF;
-    min-height: 200px;
-    padding: 60px 60px 20px;
+
+.arrow{
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
 }
-.ct-heart{
-    color: #F74933;
-}
- pre.prettyprint{
-    background-color: #ffffff;
-    border: 1px solid #999;
-    margin-top: 20px;
-    padding: 20px;
-    text-align: left;
-}
-.atv, .str{
-    color: #05AE0E;
-}
-.tag, .pln, .kwd{
-     color: #3472F7;
-}
-.atn{
-  color: #2C93FF;
-}
-.pln{
-   color: #333;
-}
-.com{
-    color: #999;
-}
-.btn-simple{
-    opacity: .8;
-    color: #666666;
-    background-color: transparent;
-}
-.btn-simple:hover,
-.btn-simple:focus{
-    background-color: transparent;
-    box-shadow: none;
-    opacity: 1;
-}
-.btn-simple i{
-    font-size: 16px;
-}
-.navbar-brand-logo{
-    padding: 0;
-}
-.navbar-brand-logo .logo{
-    border: 1px solid #333333;
-    border-radius: 50%;
-    float: left;
-    overflow: hidden;
-    width: 60px;
-}
-.navbar .navbar-brand-logo .brand{
-    color: #FFFFFF;
-    float: left;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 20px;
-    margin-left: 10px;
-    margin-top: 10px;
-    width: 60px;
-}
-.navbar-default .navbar-brand-logo .brand{
-    color: #555;
-}*/
