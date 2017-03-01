@@ -34,7 +34,7 @@
         <div class="row">
 
           <% if @tasks.any? %>
-            <% @tasks.each do |task| %>
+            <% @tasks.reverse.each do |task| %>
 
           <div class="col-md-4">
             <div class="card-deck">
