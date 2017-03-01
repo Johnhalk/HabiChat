@@ -36,9 +36,8 @@
    font-family: 'Cabin Sketch', cursive;
    text-align: center;
    background-color: #efefef;
-   /*background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2859%29.jpg");*/
    border-radius:4px;
-   width: 400px;
+   width: 350px;
    -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
 -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
 box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
@@ -183,7 +182,7 @@ body, html {
     color: #444444;
 }
 .card-deck, .front, .back {
-    width: 400px;
+    width: 350px;
     height: 420px;
     border-radius: 4px;
     -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
@@ -345,7 +344,7 @@ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
   background-color: white;
   border-radius: 5px;
   overflow: auto;
-  height: 140px;
+  height: 120px;
 }
 
 .no_comments{

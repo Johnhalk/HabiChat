@@ -29,14 +29,16 @@
 </div>
 <br>
 
-    <% if @tasks.any? %>
-      <% @tasks.each do |task| %>
+
       <div class="container">
         <div class="row">
-          <div class="col-md-4"></div>
+
+          <% if @tasks.any? %>
+            <% @tasks.each do |task| %>
+
           <div class="col-md-4">
-        <div class="card-deck">
-          <div class="card">
+            <div class="card-deck">
+          <div class="card" style="width: 100%; ">
             <div class="front">
               <div class="cover">
                 <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2859%29.jpg"/>
@@ -105,9 +107,12 @@
           </div> <!-- This closes card -->
     </div> <!-- This closes card deck -->
   </div>
+
+    <% end %> <!-- This closes iterator -->
+  </div> <!-- This closes row -->
+
   </div> <!-- This closes row -->
 </div> <!-- This closes container -->
-    <% end %> <!-- This closes iterator -->
-  <% else %>
-    <h1>No tasks were created yet</h1>
-  <% end %> <!-- This closes if statement -->
+<% else %>
+  <h1>No tasks were created yet</h1>
+<% end %> <!-- This closes if statement -->
