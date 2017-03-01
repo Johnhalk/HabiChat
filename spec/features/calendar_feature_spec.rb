@@ -8,7 +8,7 @@ feature '#Calendar.' do
   context 'No tasks added:' do
     scenario 'should display empty calendar' do
       visit '/calendar'
-      expect(page).to have_content 'No tasks were created yet'
+      expect(page).to have_content 'No tasks have been added to the calendar yet'
     end
   end
   context 'Displays calendar' do
@@ -47,6 +47,19 @@ feature '#Calendar.' do
       click_button 'Add to calendar'
       visit '/calendar'
       expect(page).to have_content 'Wash dishes'
+    end
+
+    scenario 'I can delete a task and it is deleted in the calendar' do
+      sign_up
+      visit tasks_path
+      fill_in 'Description', with: 'Wash dishes'
+      select '3', from: 'Priority'
+      click_button 'Add task'
+      click_button 'Add to calendar'
+      visit tasks_path
+      click_link "trash"
+      visit '/calendar'
+      expect(page).not_to have_content 'Wash dishes'
     end
   end
 end
