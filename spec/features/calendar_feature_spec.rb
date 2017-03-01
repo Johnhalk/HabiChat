@@ -8,7 +8,7 @@ feature '#Calendar.' do
   context 'No tasks added:' do
     scenario 'should display empty calendar' do
       visit '/calendar'
-      expect(page).to have_content 'No tasks were created yet'
+      expect(page).to have_content 'No tasks have been added to the calendar yet'
     end
   end
   context 'Displays calendar' do
