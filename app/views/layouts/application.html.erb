@@ -7,7 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track': true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Amiko" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
   </head>
 
   <body>
@@ -23,8 +23,8 @@
           </button> -->
           <a href="https://github.com/laurenrosie/HabiChat">
             <ul class="nav navbar-nav navbar-left">
-              <li><img class="logo" src="/images/habichat_logo.png"></li>
-              <li class="brand-name">HabiChat</li>
+              <li><img class="logo" src="/images/HabiChatLogo.png"></li>
+              <!-- <li class="brand-name">HabiChat</li> -->
             </ul>
           </a>
         </div>
@@ -33,6 +33,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
               <% if user_signed_in? %>
+                <li> <%= link_to 'Calendar', calendar_url %></li>
                 <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
               <% else %>
                 <li><%= link_to "Sign in", new_user_session_path %></li>

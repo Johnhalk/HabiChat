@@ -10,5 +10,6 @@
   <% end %>
 <% end %>
 
-
-No tasks were created yet
+<% if !@events.all.any? %>
+<div class="no_tasks_yet">  <%="No tasks have been added to the calendar yet"%> </div>
+<%end %>
