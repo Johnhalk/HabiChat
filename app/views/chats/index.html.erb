@@ -1,0 +1,11 @@
+<% @messages.each do |message| %>
+  <%= message.content %>
+  </br>
+<% end %>
+
+<%= form_for Message.new, remote: true, authenticity_token: true do |f| %>
+  <%= f.label :your_message %>:
+  <%= f.text_area :content, class: "form-control", data: {textarea: "message"} %>
+  <%= f.hidden_field :chat_id, value: @chat.id %>
+  <%= f.submit "Add a message", class: "btn btn-primary" %>
+<% end %>
