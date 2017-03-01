@@ -12,7 +12,6 @@ feature '#TaskComments.' do
       fill_in 'Description', with: 'Wash dishes'
       select '3', from: 'Priority'
       click_button 'Add task'
-      save_and_open_page
       fill_in 'comment[comments]', with: 'Test comment'
       click_button 'Add comment'
       expect(page).to have_content 'Test comment'

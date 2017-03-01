@@ -24,6 +24,7 @@ feature '#Tasks.' do
       expect(page).to have_content 'Super urgent'
       expect(page).to have_content 'In progress'
     end
+
     scenario 'as a not signed up person I can not create a task' do
       visit tasks_path
       click_button 'Add task'
@@ -38,6 +39,31 @@ feature '#Tasks.' do
       expect(page).not_to have_content 'Super urgent'
       expect(page).not_to have_content 'In progress'
       expect(page).to have_content 'A task must have a description'
+    end
+  end
+
+  context 'changing the status' do
+    scenario 'on first click changes status to Completed' do
+      sign_up
+      visit tasks_path
+      fill_in 'Description', with: 'Wash dishes'
+      select '3', from: 'Priority'
+      click_button 'Add task'
+      visit tasks_path
+      click_button 'Change status'
+      expect(page).to have_content 'Completed'
+    end
+
+    scenario 'can change completed status to in progress' do
+      sign_up
+      visit tasks_path
+      fill_in 'Description', with: 'Wash dishes'
+      select '3', from: 'Priority'
+      click_button 'Add task'
+      visit tasks_path
+      click_button 'Change status'
+      click_button 'Change status'
+      expect(page).to have_content 'In progress'
     end
   end
 end

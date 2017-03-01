@@ -25,9 +25,9 @@
                   <h3 class="name"><%= task.user.email.split("@")[0]%></h3>
                   <p class="profession"><%= task.description %></p>
                   <p class="text-center">
-                    <% if task.priority=='1'%>
+                    <% if task.priority==1%>
                       <%= 'Not that urgent' %>
-                    <% elsif task.priority=='2'%>
+                    <% elsif task.priority==2%>
                       <%= 'Quite urgent' %>
                     <% else %>
                       <%= 'Super urgent' %>
@@ -64,7 +64,7 @@
                           <%= submit_tag 'Add to calendar', data: {id: "#{task.id}"} %>
                         <% end %>
                         <% if task.user == current_user %>
-                          <%= link_to image_tag("trash.png", class: "trash"), task_path(task), method: :delete, class: 'remove' %>
+                          <%= link_to image_tag("trash.png", class: "trash"), task_path(task), method: :delete, class: 'remove', id: "trash" %>
                         <% end %>
                       </div> <!-- This closes stats container -->
                     </div> <!-- This closes main -->
