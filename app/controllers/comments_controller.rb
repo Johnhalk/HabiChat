@@ -1,8 +1,6 @@
 class CommentsController < ApplicationController
 
   def new
-    @task = Task.find(params[:task_id])
-    @comment = Comment.new
   end
 
   def create
