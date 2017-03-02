@@ -85,5 +85,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
 
-  config.habichat.allowed_request_origins = ['https://habichat.herokuapp.com', 'http://habichat.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://habichat.herokuapp.com', 'http://habichat.herokuapp.com']
 end
