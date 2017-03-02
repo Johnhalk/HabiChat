@@ -100,8 +100,8 @@
                            <%= submit_tag 'Add to calendar', data: {id: "#{task.id}"}, :class=>"button" %>
                          <% end %>
                          <% if task.user == current_user %>
-                           <%= link_to image_tag("trash.png", class: "trash"), task_path(task), method: :delete, class: 'remove' %>
-                         <% end %>
+                           <%= link_to image_tag("trash.png", class: "trash", id: "trash"), task_path(task), method: :delete, class: 'remove' %>
+                           <% end %>
                        </div> <!-- This closes stats container -->
                      </div> <!-- This closes main -->
                  </div>  <!-- This closes content -->
