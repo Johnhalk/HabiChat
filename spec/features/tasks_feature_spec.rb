@@ -17,9 +17,7 @@ feature '#Tasks.' do
     scenario 'as a signed up user, I can create a task and see it on the page' do
       sign_up
       visit tasks_path
-      fill_in 'Description', with: 'Wash dishes'
-      select '3', from: 'Priority'
-      click_button 'Add task'
+      creating_a_task
       expect(page).to have_content 'Wash dishes'
       expect(page).to have_content 'Super urgent'
       expect(page).to have_content 'In progress'
@@ -46,9 +44,7 @@ feature '#Tasks.' do
     scenario 'on first click changes status to Completed' do
       sign_up
       visit tasks_path
-      fill_in 'Description', with: 'Wash dishes'
-      select '3', from: 'Priority'
-      click_button 'Add task'
+      creating_a_task
       visit tasks_path
       click_button 'Change status'
       expect(page).to have_content 'Completed'
@@ -57,9 +53,7 @@ feature '#Tasks.' do
     scenario 'can change completed status to in progress' do
       sign_up
       visit tasks_path
-      fill_in 'Description', with: 'Wash dishes'
-      select '3', from: 'Priority'
-      click_button 'Add task'
+      creating_a_task
       visit tasks_path
       click_button 'Change status'
       click_button 'Change status'

@@ -9,9 +9,7 @@ feature '#TaskComments.' do
     scenario 'as a signed up user, I can add a comment to a task and see it on the page' do
       sign_up
       visit tasks_path
-      fill_in 'Description', with: 'Wash dishes'
-      select '3', from: 'Priority'
-      click_button 'Add task'
+      creating_a_task
       fill_in 'comment[comments]', with: 'Test comment'
       click_button 'Add comment'
       expect(page).to have_content 'Test comment'
@@ -25,9 +23,7 @@ feature '#TaskComments.' do
     scenario 'does not let you submit a comment with no text' do
       sign_up
       visit tasks_path
-      fill_in 'Description', with: 'Wash dishes'
-      select '3', from: 'Priority'
-      click_button 'Add task'
+      creating_a_task
       click_button 'Add comment'
       expect(page).to have_content 'A comment must have text'
     end
