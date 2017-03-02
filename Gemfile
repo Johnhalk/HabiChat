@@ -56,6 +56,9 @@ group :test do
   gem 'capybara'
   gem 'rspec-collection_matchers'
   gem 'shoulda'
+  gem 'coveralls', require: false
+  gem 'rubocop-rspec'
+  gem 'rubocop'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
