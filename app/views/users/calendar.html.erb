@@ -3,9 +3,9 @@
   <%= date.day %>
 
   <% events.each do |event| %>
-    <div>
+    <div class="calendar-task<%= Task.find(event.task_id).priority %>">
       <%= Task.find(event.task_id).description %>
-      <%= Task.find(event.task_id).created_at %>
+      <%= Task.find(event.task_id).created_at.strftime("%H:%M")%>
     </div>
   <% end %>
 <% end %>

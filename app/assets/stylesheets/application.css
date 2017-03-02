@@ -15,6 +15,7 @@
  *= require simple_calendar
  */
 
+
  /* Typography */
 
  html, body {
@@ -124,6 +125,18 @@
  }
 
  /* Calendar */
+
+ .calendar-task1{
+   background-color: #E3FAEE
+ }
+
+ .calendar-task2{
+    background-color: #FAFAE3
+ }
+
+ .calendar-task3{
+    background-color: #FFD9EB
+ }
 
  /* Chat */
 
