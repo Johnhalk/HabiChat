@@ -44,7 +44,7 @@
             <li><%= link_to "Home", tasks_path %></li>
             <% if user_signed_in? %>
               <li><%= link_to "Calendar", calendar_url %></li>
-              <li><%= link_to "Chat room", 'chats/show' %></li>
+              <li><%= link_to "Chat room", chats_path %></li>
               <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
             <% else %>
               <li><%= link_to "Sign in", new_user_session_path %></li>

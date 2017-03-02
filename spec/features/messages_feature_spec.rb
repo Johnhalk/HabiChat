@@ -27,7 +27,7 @@ feature "#Messages" do
     scenario "Can post a message on new_message route" do
       visit new_message_path
       fill_in 'message_content', with: 'Hi, this is a message'
-      click_button 'Add a message'
+      click_button 'send'
       visit '/chats'
       expect(page).to have_content 'Hi, this is a message'
     end
