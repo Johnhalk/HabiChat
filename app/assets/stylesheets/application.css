@@ -76,6 +76,12 @@
    line-height: 1em;
  }
 
+ h4 {
+   font-size: 2em;
+   color: #495ba2;
+   font-weight: bold;
+ }
+
  .highlight {
    color: #495ba2;
    font-weight: bold;
@@ -111,7 +117,7 @@
  }
 
  .welcome {
-   margin-top: 1.3em;
+   margin-top: 0.3em;
  }
 
  input, label, select, .btn {
@@ -128,9 +134,11 @@
  }
 
  .background {
-   background-image: url("notepad.jpg");
+   background-image: url("http://bgfons.com/upload/paper_texture327.jpg");
    background-size: cover;
-   margin-top: 3em;
+   padding-top: 3em;
+   margin-top: 0;
+   min-height: 100vh;
  }
 
  /* Navigation */
@@ -155,14 +163,16 @@
 
  .nav, .navbar-default, .container-fluid {
    background-color: 	#efefef;
+   padding: 0;
+   margin-bottom: 0;
  }
 
 
  /* Tasks */
 
- .task_description{
+ .task_description {
    overflow: auto;
-   height: 50px;
+   height: 2em;
  }
 
  .task_form {
@@ -192,10 +202,11 @@
 
  .comment {
    margin-top: 0;
+   margin-bottom: 1.5em;
  }
 
  .stats-container {
-   margin-top: 1em;
+   margin-top: 2em;
  }
 
  .btn-left {
@@ -241,11 +252,11 @@
  }
  .card-deck, .front, .back {
      width: 350px;
-     height: 420px;
+     height: 480px;
      border-radius: 4px;
      -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
- -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
- box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
  }
  .card .cover{
      height: 105px;
@@ -371,24 +382,25 @@
 
  /* Calendar */
 
- .calendar-task1{
+ .calendar-task1 {
    background-color: #E3FAEE
  }
 
- .calendar-task2{
+ .calendar-task2 {
     background-color: #FAFAE3
  }
 
- .calendar-task3{
+ .calendar-task3 {
     background-color: #FFD9EB
  }
 
- .calendar-heading{
+ .calendar-heading {
    text-align: center;
  }
 
- .calendar-title{
+ .calendar-title {
    font-size: 40px;
+   line-height: 3em;
  }
 
  .table_day_header{
