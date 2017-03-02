@@ -114,6 +114,15 @@
    margin-top: 0;
  }
 
+ .stats-container {
+   margin-top: 0.3em;
+ }
+
+ .stats-container .btn {
+   width: 12em;
+   margin: 0.3em;
+ }
+
  /* Calendar */
 
  /* Chat */
@@ -370,15 +379,6 @@
    background-color: #efefef;
    /*background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2859%29.jpg");*/
    width: 400px;
- }
-
- .stats-container {
-   margin-top: 0.3em;
- }
-
- .stats-container .btn {
-   width: 12em;
-   margin: 0.3em;
  }
 
  .card .stats{
