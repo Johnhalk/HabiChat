@@ -1,106 +1,108 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-      <div class="task_form">
-        <h2> Add a Task: </h2>
-        <%= form_for Task.new do |f| %>
-          <%= f.label :description, :class => "highlight" %>
-          <br>
-          <%= f.text_field :description, :class=>"form_description_box"%>
-          <br>
-          <%= f.label :priority, :class => "highlight" %>
-          <%= f.select :priority, (1..3) %>
-          <br>
-          <%= f.submit 'Add task', :class => 'btn btn-primary'%>
-        <% end %>
+<div class="background">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="task_form">
+          <h2> Add a Task: </h2>
+          <%= form_for Task.new do |f| %>
+            <%= f.label :description, :class => "highlight" %>
+            <br>
+            <%= f.text_field :description, :class=>"form_description_box"%>
+            <br>
+            <%= f.label :priority, :class => "highlight" %>
+            <%= f.select :priority, (1..3) %>
+            <br>
+            <%= f.submit 'Add task', :class => 'btn btn-primary'%>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <% if @tasks.any? %>
-      <% @tasks.reverse.each do |task| %>
-        <div class="col-md-4">
-          <div class="card-deck">
-            <div class="card" style="width: 100%; ">
-              <div class="front">
-                <div class="cover">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2859%29.jpg">
-                </div>
-                <div class="user">
-                  <img class="img-circle" src="http://lorempixel.com/output/animals-q-c-480-480-<%= task.user_id % 8 + 1 %>.jpg">
-                </div>
-                <div class="content">
-                  <div class="main">
-                    <p class="highlight"><%= task.user.username %></p>
-                    <h2><%= task.description %></h2>
-                    <p>
-                      <% if task.priority == 1 %>
-                        <b class="highlight"><%= 'Priority: '%></b><%= 'Not that urgent' %>
-                      <% elsif task.priority == 2 %>
-                        <b class="highlight"><%= 'Priority: '%></b><%= 'Quite urgent' %>
-                      <% else %>
-                        <b class="highlight"><%= 'Priority:'%></b> <%='Super urgent' %>
-                      <% end %>
-                    </p>
-                    <p><b class="highlight"><%= 'Status: '%></b><%= + task.status %></p>
+  <div class="container">
+    <div class="row">
+      <% if @tasks.any? %>
+        <% @tasks.reverse.each do |task| %>
+          <div class="col-md-4">
+            <div class="card-deck">
+              <div class="card" style="width: 100%; ">
+                <div class="front">
+                  <div class="cover">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2859%29.jpg">
                   </div>
-                </div>
-                <!-- This closes content -->
-                <div class="footer" id = "footer">
-                  <p class="light-grey">See Comments</p>
-                </div>
-              </div> <!-- This closes front -->
-              <div class="back">
-                <div class="comments_header">
-                  <h2>Comments</h2>
-                </div>
-                <div class="content">
-                  <div class="main">
-                    <div class="all_comments">
-                      <% if task.comments.any?  %>
-                        <% task.comments.all.each do |comment| %>
-                          <p><span class="highlight"> <%= comment.user.username%></span><%= +": "+comment.comments %></p>
+                  <div class="user">
+                    <img class="img-circle" src="http://lorempixel.com/output/animals-q-c-480-480-<%= task.user_id % 8 + 1 %>.jpg">
+                  </div>
+                  <div class="content">
+                    <div class="main">
+                      <p class="highlight"><%= task.user.username %></p>
+                      <h2><%= task.description %></h2>
+                      <p>
+                        <% if task.priority == 1 %>
+                          <b class="highlight"><%= 'Priority: '%></b><%= 'Not that urgent' %>
+                        <% elsif task.priority == 2 %>
+                          <b class="highlight"><%= 'Priority: '%></b><%= 'Quite urgent' %>
+                        <% else %>
+                          <b class="highlight"><%= 'Priority:'%></b> <%='Super urgent' %>
                         <% end %>
-                      <% else%>
-                        <span class="light-grey">No Comments Yet</span>
-                      <% end %>
+                      </p>
+                      <p><b class="highlight"><%= 'Status: '%></b><%= + task.status %></p>
                     </div>
-                    <div class="stats-container">
-                      <%= form_for [task, task.comments.new] do |t| %>
-                        <%= t.label :comment, :class=>"comment" %>
-                        <%= t.text_field :comments, :class=>"form_description_box comment" %>
-                        <%= t.submit 'Add comment', :class=>"btn btn-primary btn-back" %>
-                      <% end %>
-                      <span style="display:inline-block; float: left;">
-                      <%= form_for [task] do |r| %>
-                        <%= r.submit 'Change status', :class=>"btn btn-primary btn-left" %>
-                      <% end %>
+                  </div>
+                  <!-- This closes content -->
+                  <div class="footer" id = "footer">
+                    <p class="light-grey">See Comments</p>
+                  </div>
+                </div> <!-- This closes front -->
+                <div class="back">
+                  <div class="comments_header">
+                    <h2>Comments</h2>
+                  </div>
+                  <div class="content">
+                    <div class="main">
+                      <div class="all_comments">
+                        <% if task.comments.any?  %>
+                          <% task.comments.all.each do |comment| %>
+                            <p><span class="highlight"> <%= comment.user.username%></span><%= +": "+comment.comments %></p>
+                          <% end %>
+                        <% else%>
+                          <span class="light-grey">No Comments Yet</span>
+                        <% end %>
+                      </div>
+                      <div class="stats-container">
+                        <%= form_for [task, task.comments.new] do |t| %>
+                          <%= t.label :comment, :class=>"comment" %>
+                          <%= t.text_field :comments, :class=>"form_description_box comment" %>
+                          <%= t.submit 'Add comment', :class=>"btn btn-primary btn-back" %>
+                        <% end %>
+                        <span style="display:inline-block; float: left;">
+                        <%= form_for [task] do |r| %>
+                          <%= r.submit 'Change status', :class=>"btn btn-primary btn-left" %>
+                        <% end %>
+                        </span>
+                        <span style="display:inline-block; float: right;">
+                        <%= form_tag(controller: "tasks", action: "calendar", method: "post") do %>
+                          <%= hidden_field_tag 't_id', task.id %>
+                          <%= submit_tag 'Add to calendar', data: {id: "#{task.id}"}, :class=>"btn btn-primary btn-right" %>
+                        <% end %>
                       </span>
-                      <span style="display:inline-block; float: right;">
-                      <%= form_tag(controller: "tasks", action: "calendar", method: "post") do %>
-                        <%= hidden_field_tag 't_id', task.id %>
-                        <%= submit_tag 'Add to calendar', data: {id: "#{task.id}"}, :class=>"btn btn-primary btn-right" %>
-                      <% end %>
-                    </span>
-                      <% if task.user == current_user %>
-                        <%= link_to image_tag("trash.png", class: "trash"), task_path(task), method: :delete, class: 'remove' %>
-                      <% end %>
-                    </div> <!-- This closes stats container -->
-                  </div> <!-- This closes main -->
-                </div>  <!-- This closes content -->
-              </div> <!-- This closes back -->
-            </div> <!-- This closes card -->
-          </div> <!-- This closes card deck -->
-        </div>
-      <% end %> <!-- This closes iterator -->
+                        <% if task.user == current_user %>
+                          <%= link_to image_tag("trash.png", class: "trash"), task_path(task), method: :delete, class: 'remove' %>
+                        <% end %>
+                      </div> <!-- This closes stats container -->
+                    </div> <!-- This closes main -->
+                  </div>  <!-- This closes content -->
+                </div> <!-- This closes back -->
+              </div> <!-- This closes card -->
+            </div> <!-- This closes card deck -->
+          </div>
+        <% end %> <!-- This closes iterator -->
+      </div> <!-- This closes row -->
     </div> <!-- This closes row -->
-  </div> <!-- This closes row -->
-</div> <!-- This closes container -->
+  </div> <!-- This closes container -->
 
-<% else %>
-  <h1>No tasks were created yet</h1>
-<% end %> <!-- This closes if statement -->
+  <% else %>
+    <h1>No tasks were created yet</h1>
+  <% end %> <!-- This closes if statement -->
+</div>

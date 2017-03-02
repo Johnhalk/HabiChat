@@ -127,8 +127,10 @@
    border-color: #68e;
  }
 
- .container {
-   background-image: url("http://www.allvectors.com/wp-content/uploads/2012/02/notepaper-background.jpg");
+ .background {
+   background-image: url("notepad.jpg");
+   background-size: cover;
+   margin-top: 3em;
  }
 
  /* Navigation */
