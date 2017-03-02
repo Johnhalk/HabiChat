@@ -4,9 +4,7 @@ feature "#Messages" do
   context "User isn't signed in" do
     scenario "Can't post a message" do
       visit '/'
-      click_link 'Chat room'
-      fill_in 'message_content', with: 'Hi, this is a message'
-      expect {click_button 'send'}.to raise_error
+      expect(page).not_to have_link 'Chat room'
     end
   end
 
