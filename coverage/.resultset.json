@@ -108,7 +108,7 @@
         1,
         null,
         1,
-        21,
+        17,
         null,
         null
       ],
@@ -118,7 +118,7 @@
         1,
         null,
         1,
-        79,
+        88,
         null,
         null,
         1,
@@ -307,18 +307,8 @@
         0,
         0,
         0
-      ],
-      "/Users/tamarlehmann/Makers/Course/HabiChat/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/tamarlehmann/Makers/Course/HabiChat/app/mailers/application_mailer.rb": [
-        0,
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1488471061
+    "timestamp": 1488475456
   }
 }

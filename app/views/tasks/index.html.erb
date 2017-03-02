@@ -18,7 +18,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <div class="container">
     <div class="row">
@@ -47,14 +46,33 @@
                           <b class="highlight"><%= 'Priority:'%></b> <%='Super urgent' %>
                         <% end %>
                       </p>
-                      <p><b class="highlight"><%= 'Status: '%></b><%= + task.status %></p>
+                      <p><b class="highlight"><%= 'Status: '%></b><%= task.status %></p>
+                      <p><b class="highlight"><%= 'Completion Date: '%></b> <%=task.completiondate %></p>
                     </div>
-                  </div>
+                    <div class="user">
+                      <img class="img-circle" src="http://lorempixel.com/output/animals-q-c-480-480-<%= task.user_id % 8 + 1 %>.jpg">
+                    </div>
+                    <div class="content">
+                      <div class="main">
+                        <p class="highlight"><%= task.user.username %></p>
+                        <h2><%= task.description %></h2>
+                        <p>
+                          <% if task.priority == 1 %>
+                            <b class="highlight"><%= 'Priority: '%></b><%= 'Not that urgent' %>
+                          <% elsif task.priority == 2 %>
+                            <b class="highlight"><%= 'Priority: '%></b><%= 'Quite urgent' %>
+                          <% else %>
+                            <b class="highlight"><%= 'Priority:'%></b> <%='Super urgent' %>
+                          <% end %>
+                        </p>
+                        <p><b class="highlight"><%= 'Status: '%></b><%= + task.status %></p>
+                      </div>
+                    </div>
                   <!-- This closes content -->
-                  <div class="footer" id = "footer">
-                    <p class="light-grey">See Comments</p>
-                  </div>
-                </div> <!-- This closes front -->
+                    <div class="footer" id = "footer">
+                      <p class="light-grey">See Comments</p>
+                    </div>
+                 </div> <!-- This closes front -->
                 <div class="back">
                   <div class="comments_header">
                     <h2>Comments</h2>

@@ -41,10 +41,7 @@ feature '#Calendar.' do
     scenario 'I can create a task and see it in the calendar' do
       sign_up
       visit tasks_path
-      fill_in 'Description', with: 'Wash dishes'
-      select '3', from: 'Priority'
-      click_button 'Add task'
-      click_button 'Add to calendar'
+      creating_a_task_and_adding_to_cal
       visit '/calendar'
       expect(page).to have_content 'Wash dishes'
     end
@@ -52,10 +49,7 @@ feature '#Calendar.' do
     scenario 'I cannot add a task to the calendar that has already been added' do
       sign_up
       visit tasks_path
-      fill_in 'Description', with: 'Wash dishes'
-      select '3', from: 'Priority'
-      click_button 'Add task'
-      click_button 'Add to calendar'
+      creating_a_task_and_adding_to_cal
       visit tasks_path
       click_button 'Add to calendar'
       expect(page).to have_content 'Event was already added'
@@ -64,10 +58,7 @@ feature '#Calendar.' do
     scenario 'I can delete a task' do
       sign_up
       visit tasks_path
-      fill_in 'Description', with: 'Wash dishes'
-      select '3', from: 'Priority'
-      click_button 'Add task'
-      click_button 'Add to calendar'
+      creating_a_task_and_adding_to_cal
       visit tasks_path
       find('.remove').click
       expect(page).to have_content 'Task successfully deleted'
@@ -76,10 +67,7 @@ feature '#Calendar.' do
     scenario 'I can delete a task and it is deleted in the calendar' do
       sign_up
       visit tasks_path
-      fill_in 'Description', with: 'Wash dishes'
-      select '3', from: 'Priority'
-      click_button 'Add task'
-      click_button 'Add to calendar'
+      creating_a_task_and_adding_to_cal
       visit tasks_path
       find('.remove').click
       expect(page).to have_content 'Task successfully deleted'
