@@ -14,398 +14,435 @@
  *= require_self
  *= require simple_calendar
  */
- .notice{
-   font-family: 'Cabin Sketch', cursive;
-    text-align: center;
-    color: red;
-    font-size: 40px;
+
+ /* Typography */
+
+ html, body {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 16px;
+   text-align: center;
  }
 
- .alert{
+ h1, h2, h3 {
    font-family: 'Cabin Sketch', cursive;
-   text-align: center;
+ }
+
+ h1 {
+   font-size: 3em;
+ }
+
+ h2 {
+   font-size: 2em;
+   color: #495ba2;
+   margin: 1em;
+ }
+
+ p {
+   line-height: 1em;
+ }
+
+ .highlight {
+   color: #495ba2;
+   font-weight: bold;
+   line-height: 1em;
+ }
+
+
+ /*.card .stats h4{
+   font-family: 'Arima Madurai', cursive;
+ }*/
+
+
+ /* General */
+ .notice {
    color: red;
-   font-size: 40px;
-
+   font-size: 1.5em;
  }
-.task_form_title{
-  color: #495ba2;
-  font-family: 'Cabin Sketch', cursive;
-  text-align: center;
-}
 
-.login_form_title{
-  color: #495ba2;
-  font-family: 'Cabin Sketch', cursive;
-  text-align: center;
-  font-size: 60px !important;
-}
+ .alert {
+   color: red;
+   font-size: 1.5em;
+   line-height: 1em;
+ }
 
- .task_form{
-   font-family: 'Cabin Sketch', cursive;
-   text-align: center;
+ .welcome {
+   margin-top: 1.3em;
+ }
+
+ input, label, select, .btn {
+   margin: 0.3em;
+ }
+
+ input[type="submit"] {
+   margin-bottom: 1em;
+ }
+
+ /* Navigation */
+ .navbar-right {
+   margin-top: 1.5em;
+ }
+
+
+ /* Tasks */
+
+ .task_form {
    background-color: #efefef;
-   border-radius:4px;
+   border-radius: 4px;
    width: 350px;
+
+   margin-bottom: 2em;
+   margin-top: 3em;
+   padding: 0.3em;
+
    -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
--moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+   -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+   box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
  }
 
- .login_form{
-   font-family: 'Cabin Sketch', cursive;
-   text-align: center;
-   font-size: 20px;
-   background-color: #efefef;
-   border-radius:4px;
-   width: 350px;
-   -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
--moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+ .all_comments {
+   background-color: white;
+   border-radius: 5px;
+   overflow: auto;
+   height: 120px;
  }
 
- .sign_in_image{
-   width: 600px;
-   height:300px;
-   border-radius:4px;
-   border-color: grey;
-   -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
--moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
-
-
+ .all_comments p {
+   margin-top: 1em;
  }
 
-.form_description_box{
-  border-radius:4px;
-
-}
-
-
- .button {
-    border-radius:4px;
+ .comment {
+   margin-top: 0;
  }
-.trash {
-  width: 50px;
-  height: 50px;
-}
-.simple-calendar {
-   .day {}
 
-   .wday-0 {}
-   .wday-1 {}
-   .wday-2 {}
-   .wday-3 {}
-   .wday-4 {}
-   .wday-5 {}
-   .wday-6 {}
+ .stats-container {
+   margin-top: 0.3em;
+ }
 
-   .today {}
-   .past {}
-   .future {}
+ .stats-container .btn {
+   width: 12em;
+   margin: 0.3em;
+ }
 
-   .start-date {}
+ /* Calendar */
 
-   .prev-month {}
-   .next-month { }
-   .current-month {}
+ /* Chat */
 
-   .has-events {}
-}
 
-body, html {
-  font-size: 16px;
-}
 
-.logo {
-  max-height: 250px;
-  padding: 0;
-  width: 280px;
-  height: 100px;
-}
-
-.brand-name{
-  margin-top: 11px;
-  /*text-transform: uppercase;*/
-  font-size: 40px;
-  font-weight: bold;
-  color: #495ba2;
-  font-family: 'Cabin Sketch', cursive;
-}
-
-.nav, .navbar-default, .container-fluid {
-  background-color: 	#efefef;
-}
-
-.btn:hover,
-.btn:focus,
-.btn:active{
-    outline: 0 !important;
-}
-/* entire container, keeps perspective */
-.card-deck {
-      -webkit-perspective: 800px;
-   -moz-perspective: 800px;
-     -o-perspective: 800px;
-        perspective: 800px;
-        margin-bottom: 30px;
-        width: 400px;
-}
-/* flip the pane when hovered */
-.card-deck:not(.manual-flip):hover .card,
-.card-deck.hover.manual-flip .card{
-    -webkit-transform: rotateY( 180deg );
--moz-transform: rotateY( 180deg );
- -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
-}
-.card-deck.static:hover .card,
-.card-deck.static.hover .card {
-    -webkit-transform: none;
--moz-transform: none;
- -o-transform: none;
-    transform: none;
-}
-/* flip speed goes here */
-.card {
-     -webkit-transition: -webkit-transform .5s;
-   -moz-transition: -moz-transform .5s;
-     -o-transition: -o-transform .5s;
-        transition: transform .5s;
--webkit-transform-style: preserve-3d;
-   -moz-transform-style: preserve-3d;
-     -o-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-    position: relative;
-}
-/* hide back of pane during swap */
-.front, .back {
-    -webkit-backface-visibility: hidden;
-   -moz-backface-visibility: hidden;
-     -o-backface-visibility: hidden;
-        backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #FFF;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
-}
-/* front pane, placed above back */
-.front {
-    z-index: 2;
-}
-/* back, initially hidden pane */
-.back {
-  background-color: #efefef;
-        -webkit-transform: rotateY( 180deg );
-   -moz-transform: rotateY( 180deg );
-     -o-transform: rotateY( 180deg );
-        transform: rotateY( 180deg );
-        z-index: 3;
-}
-.back .btn-simple{
-    position: absolute;
-    left: 0;
-    bottom: 4px;
-}
-/*        Style       */
-.card{
-    background: none repeat scroll 0 0 #FFFFFF;
-    border-radius: 4px;
-    color: #444444;
-}
-.card-deck, .front, .back {
-    width: 350px;
-    height: 420px;
-    border-radius: 4px;
-    -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
--moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
-}
-.card .cover{
-    height: 105px;
-    overflow: hidden;
-    border-radius: 4px 4px 0 0;
-}
-.card .cover img{
-    width: 100%;
-}
-.card .user{
-    border-radius: 50%;
-    display: block;
-    height: 120px;
-    margin: -55px auto 0;
-    overflow: hidden;
-    width: 120px;
-}
-.card .user img{
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 4px solid #FFFFFF;
-    width: 100%;
-}
-.card .content{
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: none;
-    /*padding: 10px 20px 20px;*/
-
-    font-family: 'Cabin Sketch', cursive;
-
-}
-.card .content .main {
-  text-align: center;
-    min-height: 160px;
-
-}
-.card .back .content .main {
+  .login_form{
     text-align: center;
-    height: 215px;
-    font-family: 'Cabin Sketch', cursive;
-
-}
-.card .name {
-    font-family: 'Cabin Sketch', cursive;
     font-size: 20px;
-    line-height: 28px;
-    margin: 10px 0 0;
-    text-align: center;
-    text-transform: capitalize;
-}
-.card h5{
-  font-family: 'Cabin Sketch', cursive;
-  font-size: 20px;
-  text-align: center;
-    margin: 5px 0;
-    font-weight: 400;
-    line-height: 20px;
-}
+    background-color: #efefef;
+    border-radius:4px;
+    width: 350px;
+    -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+ -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+  }
 
-.card .footer{
-    /*height: 105px;*/
-    font-family: 'Cabin Sketch', cursive;
-    font-size: 15px;
-    position: absolute;
-    bottom: 0;
-    overflow: hidden;
-    border-radius: 0 0 4px 4px ;
-    width: 100%;
-    height: 10%;
-    color: #999999;
-    text-align: center;
-    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2859%29.jpg");
-}
+  .sign_in_image{
+    width: 600px;
+    height:300px;
+    border-radius:4px;
+    border-color: grey;
+    -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+ -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
 
 
-.card .profession{
-    color: #495ba2;
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 20px;
-}
+  }
 
-.card .footer .social-links{
-    font-size: 18px;
-}
-.card .footer .social-links a{
-    margin: 0 7px;
-}
-.card .footer .btn-simple{
-    margin-top: -6px;
-}
-.card .header {
-    padding: 15px 20px;
-    height: 90px;
-}
+ .form_description_box{
+   border-radius:4px;
 
-.card .comments_title{
-  font-family: 'Cabin Sketch', cursive;
-  border-top: 10px;
-    border-bottom: 1px solid #EEEEEE;
-    font-size: 40px;
-    font-weight: 400;
-    padding-bottom: 10px;
-    text-align: center;
-}
+ }
+ .trash {
+   width: 50px;
+   height: 50px;
+ }
+ .simple-calendar {
+    .day {}
 
-.comment_form{
-  font-family: 'Cabin Sketch', cursive;
-  text-align: center;
-  background-color: #efefef;
-  /*background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2859%29.jpg");*/
-  width: 400px;
-}
-.card .stats-container{
-    /*width: 100%;*/
-    margin-top: 50px;
-}
-.card .stats{
-    display: block;
-    float: left;
-    width: 33.333333%;
-    text-align: center;
-}
-.task_action_buttons{
-  text-align: center;
-}
-.card .stats:first-child{
-    border-right: 1px solid #EEEEEE;
-}
-.card .stats:last-child{
-    border-left: 1px solid #EEEEEE;
-}
-.card .stats h4{
-        font-family: 'Arima Madurai', cursive;
-    font-weight: 300;
-    margin-bottom: 5px;
-}
-.card .stats p{
-    color: #777777;
-}
+    .wday-0 {}
+    .wday-1 {}
+    .wday-2 {}
+    .wday-3 {}
+    .wday-4 {}
+    .wday-5 {}
+    .wday-6 {}
 
-.comments_header{
-  margin-top: 20px;
-  height: 50px;
+    .today {}
+    .past {}
+    .future {}
 
-}
-.all_comments{
-  background-color: white;
-  border-radius: 5px;
-  overflow: auto;
-  height: 120px;
-}
+    .start-date {}
 
-.no_comments{
-  color: grey;
-}
+    .prev-month {}
+    .next-month { }
+    .current-month {}
 
-/*.simple-calendar{
-  font-family: 'Cabin Sketch', cursive;
+    .has-events {}
+ }
 
-}*/
+ body, html {
+   font-size: 16px;
+ }
 
-.no_tasks_yet{
-  font-family: 'Cabin Sketch', cursive;
-  color: red;
-  text-align: center;
-  font-size: 30px;
-}
+ .logo {
+   max-height: 250px;
+   padding: 0;
+   width: 280px;
+   height: 100px;
+ }
 
-.calendar-heading{
-  text-align: center;
-}
-.calendar-title{
-  font-family: 'Cabin Sketch', cursive;
-  font-size: 40px;
-}
+ .brand-name{
+   margin-top: 11px;
+   /*text-transform: uppercase;*/
+   font-size: 40px;
+   font-weight: bold;
+   color: #495ba2;
+ }
 
-.table_day_header{
-  text-align: center !important;
-  border-bottom-width: 5px !important;
-  border-bottom-color: black !important;
+ .nav, .navbar-default, .container-fluid {
+   background-color: 	#efefef;
+ }
 
-}
+ .btn:hover,
+ .btn:focus,
+ .btn:active{
+     outline: 0 !important;
+ }
+ /* entire container, keeps perspective */
+ .card-deck {
+       -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+      -o-perspective: 800px;
+         perspective: 800px;
+         margin-bottom: 30px;
+         width: 400px;
+ }
+ /* flip the pane when hovered */
+ .card-deck:not(.manual-flip):hover .card,
+ .card-deck.hover.manual-flip .card{
+     -webkit-transform: rotateY( 180deg );
+ -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+     transform: rotateY( 180deg );
+ }
+ .card-deck.static:hover .card,
+ .card-deck.static.hover .card {
+     -webkit-transform: none;
+ -moz-transform: none;
+  -o-transform: none;
+     transform: none;
+ }
+ /* flip speed goes here */
+ .card {
+      -webkit-transition: -webkit-transform .5s;
+    -moz-transition: -moz-transform .5s;
+      -o-transition: -o-transform .5s;
+         transition: transform .5s;
+ -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+         transform-style: preserve-3d;
+     position: relative;
+ }
+ /* hide back of pane during swap */
+ .front, .back {
+     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+      -o-backface-visibility: hidden;
+         backface-visibility: hidden;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-color: #FFF;
+     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+ }
+ /* front pane, placed above back */
+ .front {
+     z-index: 2;
+ }
+ /* back, initially hidden pane */
+ .back {
+   background-color: #efefef;
+         -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+      -o-transform: rotateY( 180deg );
+         transform: rotateY( 180deg );
+         z-index: 3;
+ }
+ .back .btn-simple{
+     position: absolute;
+     left: 0;
+     bottom: 4px;
+ }
+ /*        Style       */
+ .card{
+     background: none repeat scroll 0 0 #FFFFFF;
+     border-radius: 4px;
+     color: #444444;
+ }
+ .card-deck, .front, .back {
+     width: 350px;
+     height: 420px;
+     border-radius: 4px;
+     -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+ -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+ }
+ .card .cover{
+     height: 105px;
+     overflow: hidden;
+     border-radius: 4px 4px 0 0;
+ }
+ .card .cover img{
+     width: 100%;
+ }
+ .card .user{
+     border-radius: 50%;
+     display: block;
+     height: 120px;
+     margin: -55px auto 0;
+     overflow: hidden;
+     width: 120px;
+ }
+ .card .user img{
+     background: none repeat scroll 0 0 #FFFFFF;
+     border: 4px solid #FFFFFF;
+     width: 100%;
+ }
+ .card .content{
+     background-color: rgba(0, 0, 0, 0);
+     box-shadow: none;
+     /*padding: 10px 20px 20px;*/
 
-.arrow{
-  width: 40px;
-  height: 40px;
-  margin-bottom: 12px;
-}
+ }
+ .card .content .main {
+   text-align: center;
+     min-height: 160px;
+
+ }
+ .card .back .content .main {
+     text-align: center;
+     height: 215px;
+
+ }
+
+ .card h5{
+   font-size: 20px;
+   text-align: center;
+     margin: 5px 0;
+     font-weight: 400;
+     line-height: 20px;
+ }
+
+ .card .footer{
+     /*height: 105px;*/
+     font-size: 15px;
+     position: absolute;
+     bottom: 0;
+     overflow: hidden;
+     border-radius: 0 0 4px 4px ;
+     width: 100%;
+     height: 10%;
+     color: #999999;
+     text-align: center;
+     background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2859%29.jpg");
+ }
+
+
+ .card .profession{
+     color: #495ba2;
+     text-align: center;
+     font-size: 40px;
+     margin-bottom: 20px;
+ }
+
+ .card .footer .social-links{
+     font-size: 18px;
+ }
+ .card .footer .social-links a{
+     margin: 0 7px;
+ }
+ .card .footer .btn-simple{
+     margin-top: -6px;
+ }
+ .card .header {
+     padding: 15px 20px;
+     height: 90px;
+ }
+
+ .comment_form{
+   text-align: center;
+   background-color: #efefef;
+   /*background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2859%29.jpg");*/
+   width: 400px;
+ }
+
+ .card .stats{
+     display: block;
+     float: left;
+     width: 33.333333%;
+     text-align: center;
+ }
+ .task_action_buttons{
+   text-align: center;
+ }
+ .card .stats:first-child{
+     border-right: 1px solid #EEEEEE;
+ }
+ .card .stats:last-child{
+     border-left: 1px solid #EEEEEE;
+ }
+ .card .stats h4{
+     font-weight: 300;
+     margin-bottom: 5px;
+ }
+ .card .stats p{
+     color: #777777;
+ }
+
+ .comments_header{
+   height: 3em;
+ }
+
+
+ .no-comments {
+   color: lightgrey;
+ }
+
+ .no_tasks_yet{
+   color: red;
+   text-align: center;
+   font-size: 30px;
+ }
+
+ .calendar-heading{
+   text-align: center;
+ }
+ .calendar-title{
+   font-size: 40px;
+ }
+
+ .table_day_header{
+   text-align: center !important;
+   border-bottom-width: 5px !important;
+   border-bottom-color: black !important;
+
+ }
+
+ .arrow{
+   width: 40px;
+   height: 40px;
+   margin-bottom: 12px;
+ }
+
+ /* Sign in / out / login */
+
+ .login_form_title{
+   color: #495ba2;
+   text-align: center;
+   font-size: 60px !important;
+ }
