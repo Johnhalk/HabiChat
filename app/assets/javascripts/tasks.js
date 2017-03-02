@@ -4,7 +4,7 @@ $().ready(function(){
 });
 
 function rotateCard(btn){
-     var $card = $(btn).closest('.card-deck');
+     var $card = $(btn).closest('#footer');
      console.log($card);
      if($card.hasClass('hover')){
          $card.removeClass('hover');
