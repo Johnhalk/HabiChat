@@ -15,6 +15,41 @@
  *= require simple_calendar
  */
 
+ /* Form rotation */
+
+ .btn:hover,
+ .btn:focus,
+ .btn:active{
+     outline: 0 !important;
+ }
+
+ /* entire container, keeps perspective */
+ .card-deck {
+   -webkit-perspective: 800px;
+   -moz-perspective: 800px;
+   -o-perspective: 800px;
+   perspective: 800px;
+   margin-bottom: 30px;
+   width: 400px;
+ }
+
+ /* flip the pane when hovered */
+ .card-deck:not(.manual-flip):hover .card,
+ .card-deck.hover.manual-flip .card{
+   -webkit-transform: rotateY( 180deg );
+   -moz-transform: rotateY( 180deg );
+   -o-transform: rotateY( 180deg );
+   transform: rotateY( 180deg );
+ }
+
+ .card-deck.static:hover .card,
+ .card-deck.static.hover .card {
+   -webkit-transform: none;
+   -moz-transform: none;
+   -o-transform: none;
+   transform: none;
+ }
+
  /* Typography */
 
  html, body {
@@ -45,6 +80,16 @@
    color: #495ba2;
    font-weight: bold;
    line-height: 1em;
+   font-family: 'Cabin Sketch', cursive;
+ }
+
+ .login_form_title {
+   font-family: 'Cabin Sketch', cursive;
+ }
+
+ .light-grey {
+   margin-top: 1em;
+   color: lightgrey;
  }
 
 
@@ -77,9 +122,37 @@
    margin-bottom: 1em;
  }
 
+ .btn-primary {
+   background-color: #68e;
+   border-color: #68e;
+ }
+
+ .container {
+   background-image: url("http://www.allvectors.com/wp-content/uploads/2012/02/notepaper-background.jpg");
+ }
+
  /* Navigation */
  .navbar-right {
    margin-top: 1.5em;
+ }
+
+ .logo {
+   max-height: 250px;
+   padding: 0;
+   width: 280px;
+   height: 100px;
+ }
+
+ .brand-name{
+   margin-top: 11px;
+   /*text-transform: uppercase;*/
+   font-size: 40px;
+   font-weight: bold;
+   color: #495ba2;
+ }
+
+ .nav, .navbar-default, .container-fluid {
+   background-color: 	#efefef;
  }
 
 
@@ -115,164 +188,39 @@
  }
 
  .stats-container {
-   margin-top: 0.3em;
+   margin-top: 1em;
  }
 
- .stats-container .btn {
-   width: 12em;
-   margin: 0.3em;
+ .btn-left {
+   width: 7.5em;
+   height: 2.5em;
+   margin-left: 4.5em;
+   margin-top: 0em;
+   padding: 0;
  }
 
- /* Calendar */
-
- /* Chat */
-
-
-
-  .login_form{
-    text-align: center;
-    font-size: 20px;
-    background-color: #efefef;
-    border-radius:4px;
-    width: 350px;
-    -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
- -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
- box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
-  }
-
-  .sign_in_image{
-    width: 600px;
-    height:300px;
-    border-radius:4px;
-    border-color: grey;
-    -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
- -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
- box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
-
-
-  }
-
- .form_description_box{
-   border-radius:4px;
-
+ .btn-right {
+   width: 7.5em;
+   height: 2.5em;
+   margin-right: 4.5em;
+   margin-top: 0em;
+   padding: 0;
  }
+
+ .stats-container .btn-back {
+   width: 16em;
+   margin-top: 1em;
+ }
+
  .trash {
    width: 50px;
    height: 50px;
  }
- .simple-calendar {
-    .day {}
 
-    .wday-0 {}
-    .wday-1 {}
-    .wday-2 {}
-    .wday-3 {}
-    .wday-4 {}
-    .wday-5 {}
-    .wday-6 {}
-
-    .today {}
-    .past {}
-    .future {}
-
-    .start-date {}
-
-    .prev-month {}
-    .next-month { }
-    .current-month {}
-
-    .has-events {}
+ .form_description_box {
+   border-radius: 4px;
  }
 
- body, html {
-   font-size: 16px;
- }
-
- .logo {
-   max-height: 250px;
-   padding: 0;
-   width: 280px;
-   height: 100px;
- }
-
- .brand-name{
-   margin-top: 11px;
-   /*text-transform: uppercase;*/
-   font-size: 40px;
-   font-weight: bold;
-   color: #495ba2;
- }
-
- .nav, .navbar-default, .container-fluid {
-   background-color: 	#efefef;
- }
-
- .btn:hover,
- .btn:focus,
- .btn:active{
-     outline: 0 !important;
- }
- /* entire container, keeps perspective */
- .card-deck {
-       -webkit-perspective: 800px;
-    -moz-perspective: 800px;
-      -o-perspective: 800px;
-         perspective: 800px;
-         margin-bottom: 30px;
-         width: 400px;
- }
- /* flip the pane when hovered */
- .card-deck:not(.manual-flip):hover .card,
- .card-deck.hover.manual-flip .card{
-     -webkit-transform: rotateY( 180deg );
- -moz-transform: rotateY( 180deg );
-  -o-transform: rotateY( 180deg );
-     transform: rotateY( 180deg );
- }
- .card-deck.static:hover .card,
- .card-deck.static.hover .card {
-     -webkit-transform: none;
- -moz-transform: none;
-  -o-transform: none;
-     transform: none;
- }
- /* flip speed goes here */
- .card {
-      -webkit-transition: -webkit-transform .5s;
-    -moz-transition: -moz-transform .5s;
-      -o-transition: -o-transform .5s;
-         transition: transform .5s;
- -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-      -o-transform-style: preserve-3d;
-         transform-style: preserve-3d;
-     position: relative;
- }
- /* hide back of pane during swap */
- .front, .back {
-     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-      -o-backface-visibility: hidden;
-         backface-visibility: hidden;
-     position: absolute;
-     top: 0;
-     left: 0;
-     background-color: #FFF;
-     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
- }
- /* front pane, placed above back */
- .front {
-     z-index: 2;
- }
- /* back, initially hidden pane */
- .back {
-   background-color: #efefef;
-         -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-      -o-transform: rotateY( 180deg );
-         transform: rotateY( 180deg );
-         z-index: 3;
- }
  .back .btn-simple{
      position: absolute;
      left: 0;
@@ -374,43 +322,38 @@
      height: 90px;
  }
 
- .comment_form{
+ .comment_form {
    text-align: center;
    background-color: #efefef;
    /*background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2859%29.jpg");*/
    width: 400px;
  }
 
- .card .stats{
+ .card .stats {
      display: block;
      float: left;
      width: 33.333333%;
      text-align: center;
  }
- .task_action_buttons{
+ .task_action_buttons {
    text-align: center;
  }
- .card .stats:first-child{
+ .card .stats:first-child {
      border-right: 1px solid #EEEEEE;
  }
- .card .stats:last-child{
+ .card .stats:last-child {
      border-left: 1px solid #EEEEEE;
  }
- .card .stats h4{
+ .card .stats h4 {
      font-weight: 300;
      margin-bottom: 5px;
  }
- .card .stats p{
+ .card .stats p {
      color: #777777;
  }
 
  .comments_header{
    height: 3em;
- }
-
-
- .no-comments {
-   color: lightgrey;
  }
 
  .no_tasks_yet{
@@ -419,9 +362,12 @@
    font-size: 30px;
  }
 
+ /* Calendar */
+
  .calendar-heading{
    text-align: center;
  }
+
  .calendar-title{
    font-size: 40px;
  }
@@ -430,19 +376,106 @@
    text-align: center !important;
    border-bottom-width: 5px !important;
    border-bottom-color: black !important;
-
  }
 
- .arrow{
+ .arrow {
    width: 40px;
    height: 40px;
    margin-bottom: 12px;
  }
 
+ .simple-calendar {
+    .day {}
+
+    .wday-0 {}
+    .wday-1 {}
+    .wday-2 {}
+    .wday-3 {}
+    .wday-4 {}
+    .wday-5 {}
+    .wday-6 {}
+
+    .today {}
+    .past {}
+    .future {}
+
+    .start-date {}
+
+    .prev-month {}
+    .next-month { }
+    .current-month {}
+
+    .has-events {}
+ }
+
+ /* flip speed goes here */
+ .card {
+   -webkit-transition: -webkit-transform .5s;
+   -moz-transition: -moz-transform .5s;
+   -o-transition: -o-transform .5s;
+   transition: transform .5s;
+   -webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+   -o-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+   position: relative;
+ }
+
+ /* hide back of pane during swap */
+ .front, .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+ }
+
+ /* front pane, placed above back */
+ .front {
+   z-index: 2;
+ }
+
+ /* back, initially hidden pane */
+ .back {
+   background-color: #efefef;
+   -webkit-transform: rotateY( 180deg );
+   -moz-transform: rotateY( 180deg );
+   -o-transform: rotateY( 180deg );
+   transform: rotateY( 180deg );
+   z-index: 3;
+ }
+
+ /* Chat */
+
  /* Sign in / out / login */
 
- .login_form_title{
+ .login_form_title {
    color: #495ba2;
    text-align: center;
    font-size: 60px !important;
+ }
+
+ .login_form {
+   text-align: center;
+   font-size: 20px;
+   background-color: #efefef;
+   border-radius:4px;
+   width: 350px;
+   -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+   -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+   box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+ }
+
+ .sign_in_image {
+   width: 600px;
+   height:300px;
+   border-radius:4px;
+   border-color: grey;
+   -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+   -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
+   box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
  }
