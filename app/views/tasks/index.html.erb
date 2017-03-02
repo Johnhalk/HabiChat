@@ -78,7 +78,7 @@
                          <% if task.comments.any?  %>
                            <% task.comments.all.each do |comment| %>
 
-                                   <h4 class="text-center"><span class="profession"> <%= task.user.username%></span> <%= +": "+comment.comments %></h4>
+                                   <h4 class="text-center"><span class="profession"> <%= task.user.username%></span> <%= + ": " + comment.comments %></h4>
                                    <% end %>
                           <% else%>
                             <span class="no_comments">No Comments Yet</span>
