@@ -15,6 +15,7 @@
           <%= f.label :'completion date', :class => "highlight" %>
           <%= f.date_field(:completiondate) %>
           <br>
+          <br>
           <%= f.submit 'Add task', :class => 'btn btn-primary'%>
         <% end %>
       </div>
@@ -38,7 +39,7 @@
                 <div class="content">
                   <div class="main">
                     <p class="highlight"><%= task.user.username %></p>
-                    <h2><%= task.description %></h2>
+                      <h2 class="task_description"><%= task.description %></h2>
                     <p>
                       <% if task.priority == 1 %>
                         <b class="highlight"><%= 'Priority: '%></b><%= 'Not that urgent' %>

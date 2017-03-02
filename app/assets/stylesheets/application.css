@@ -160,6 +160,11 @@
 
  /* Tasks */
 
+ .task_description{
+   overflow: auto;
+   height: 50px;
+ }
+
  .task_form {
    background-color: #efefef;
    border-radius: 4px;
@@ -366,6 +371,18 @@
 
  /* Calendar */
 
+ .calendar-task1{
+   background-color: #E3FAEE
+ }
+
+ .calendar-task2{
+    background-color: #FAFAE3
+ }
+
+ .calendar-task3{
+    background-color: #FFD9EB
+ }
+
  .calendar-heading{
    text-align: center;
  }
@@ -453,6 +470,10 @@
 
  /* Chat */
 
+.panel-body{
+  overflow: auto;
+  height: 400px;
+}
  /* Sign in / out / login */
 
  .login_form_title {
