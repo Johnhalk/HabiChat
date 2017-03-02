@@ -83,4 +83,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+
+  config.habichat.allowed_request_origins = ['https://habichat.herokuapp.com', 'http://habichat.herokuapp.com']
 end
