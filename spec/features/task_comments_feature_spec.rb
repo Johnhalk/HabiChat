@@ -16,6 +16,7 @@ feature '#TaskComments.' do
       click_button 'Add comment'
       expect(page).to have_content 'Test comment'
     end
+
     scenario 'as a not signed up person I can not add a comment to a task' do
       visit tasks_path
       expect(page).not_to have_button 'Add comment'
