@@ -1,2 +1,7 @@
-<b><%= message.user.username %></b>: <%= message.content %>
+<% if message.user == current_user %>
+  <p class="chat-right"><b><%= message.user.username %></b>: <%= message.content %></p>
+<% else %>
+  <p class="chat-left"><b><%= message.user.username %></b>: <%= message.content %></p>
+<% end %>
+
 </br>

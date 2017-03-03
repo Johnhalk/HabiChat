@@ -485,7 +485,19 @@
 .panel-body{
   overflow: auto;
   height: 400px;
+  text-align: right;
 }
+
+.chat-right {
+  text-align: right;
+  color: #495ba2;
+}
+
+.chat-left {
+  text-align: left;
+  color: darkgrey;
+}
+
  /* Sign in / out / login */
 
  .login_form_title {
