@@ -409,6 +409,11 @@
    border-bottom-color: black !important;
  }
 
+ .table-striped {
+
+   background-color: white !important;
+ }
+
  .arrow {
    width: 40px;
    height: 40px;
