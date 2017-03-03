@@ -6,6 +6,10 @@ App.messages = App.cable.subscriptions.create('MessagesChannel', {
   },
 
   renderMessage: function(data) {
-    return "<p class='chat-right'> <b>" + data.user + ": </b>" + data.message + "</p>";
+    if (data.user == current_user) {
+      return "<p class='chat-right'> <b>" + data.user + ": </b>" + data.message + "</p>"; }
+    else {
+      return "<p class='chat-left'> <b>" + data.user + ": </b>" + data.message + "</p>";
+      }
   }
 });
