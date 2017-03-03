@@ -1,9 +1,9 @@
 <%= form_for message, remote: true, authenticity_token: true do |f| %>
   <%= f.label :your_message,  class: "highlight" %>:
-  <%= f.text_area :content, class: "form-control", data: {textarea: "message"}, :placeholder => "your message" %>
+  <%= f.text_area :content, class: "form-control", data: {textarea: "message"}, id: "text-area", :placeholder => "your message" %>
 
   <%= f.hidden_field :chat_id, value: chat.id %>
-  <%= f.submit "send", class: "btn btn-primary hidden", data: {send: "message"} %>
+  <%= f.submit "send", class: "btn btn-primary hidden", id: "send", data: {send: "message"} %>
 <% end %>
 <br>
 <br>
