@@ -15,3 +15,14 @@
 //= require turbolinks
 //= require_tree ./channels
 //= require tasks
+
+
+$(document).on('turbolinks:load', function (){
+  $('#text-area').keypress(function (e){
+    var key = e.which;
+    if(key == 13) {
+      $("#send").click();
+      $("#text-area").val('');
+    }
+  });
+})
