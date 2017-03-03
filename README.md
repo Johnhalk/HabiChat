@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/laurenrosie/HabiChat/badge.svg?branch=master)](https://coveralls.io/github/laurenrosie/HabiChat?branch=master) [![Build Status](https://travis-ci.org/laurenrosie/HabiChat.svg?branch=master)](https://travis-ci.org/laurenrosie/HabiChat)
+
 # [HabiChat](https://habichat.herokuapp.com/)
 
 ### Home life, keep group related scheduling and communication in one place
