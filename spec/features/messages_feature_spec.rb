@@ -18,7 +18,7 @@ feature "#Messages" do
     scenario "Can post a message" do
       visit '/'
       click_link 'Chat room'
-      fill_in 'message_content', with: 'Hi, this is a message'
+      fill_in 'text-area', with: 'Hi, this is a message'
       click_button 'send'
       visit '/chats'
       expect(page).to have_content 'Hi, this is a message'
@@ -26,7 +26,7 @@ feature "#Messages" do
 
     scenario "Can post a message on new_message route" do
       visit new_message_path
-      fill_in 'message_content', with: 'Hi, this is a message'
+      fill_in 'text-area', with: 'Hi, this is a message'
       click_button 'send'
       visit '/chats'
       expect(page).to have_content 'Hi, this is a message'
@@ -35,7 +35,7 @@ feature "#Messages" do
     scenario "Can post a message and see it with your username" do
       visit '/'
       click_link 'Chat room'
-      fill_in 'message_content', with: 'Hi, this is a message'
+      fill_in 'text-area', with: 'Hi, this is a message'
       click_button 'send'
       visit '/chats/show'
       expect(page).to have_content 'Test Name: Hi, this is a message'
