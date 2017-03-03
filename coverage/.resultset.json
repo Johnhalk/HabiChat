@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Lauren/HabiChat/app/models/user.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/models/user.rb": [
         1,
         null,
         null,
@@ -19,40 +19,40 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/models/application_record.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/Lauren/HabiChat/app/helpers/application_helper.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Lauren/HabiChat/app/helpers/chats_helper.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/helpers/chats_helper.rb": [
         1,
         null
       ],
-      "/Users/Lauren/HabiChat/app/helpers/comments_helper.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/helpers/comments_helper.rb": [
         1,
         null
       ],
-      "/Users/Lauren/HabiChat/app/helpers/messages_helper.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/helpers/messages_helper.rb": [
         1,
         null
       ],
-      "/Users/Lauren/HabiChat/app/helpers/registration_helper.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/helpers/registration_helper.rb": [
         1,
         null
       ],
-      "/Users/Lauren/HabiChat/app/helpers/tasks_helper.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/helpers/tasks_helper.rb": [
         1,
         null
       ],
-      "/Users/Lauren/HabiChat/app/helpers/users_helper.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/Lauren/HabiChat/app/models/comment.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/models/comment.rb": [
         1,
         null,
         1,
@@ -62,7 +62,7 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/models/message.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/models/message.rb": [
         1,
         null,
         1,
@@ -70,7 +70,7 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/models/task.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/models/task.rb": [
         1,
         1,
         25,
@@ -82,7 +82,7 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/controllers/users_controller.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/controllers/users_controller.rb": [
         1,
         null,
         1,
@@ -91,7 +91,7 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/controllers/application_controller.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/controllers/application_controller.rb": [
         1,
         1,
         null,
@@ -104,7 +104,7 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/models/event.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/models/event.rb": [
         1,
         null,
         1,
@@ -112,7 +112,7 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/controllers/tasks_controller.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/controllers/tasks_controller.rb": [
         1,
         null,
         1,
@@ -180,7 +180,7 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/controllers/registration_controller.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/controllers/registration_controller.rb": [
         1,
         null,
         1,
@@ -203,7 +203,7 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/models/with_user_association_extension.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/models/with_user_association_extension.rb": [
         1,
         1,
         2,
@@ -211,7 +211,7 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/controllers/chats_controller.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/controllers/chats_controller.rb": [
         1,
         null,
         1,
@@ -228,7 +228,7 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/models/chat.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/models/chat.rb": [
         1,
         null,
         1,
@@ -236,7 +236,7 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/controllers/messages_controller.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/controllers/messages_controller.rb": [
         1,
         null,
         1,
@@ -263,7 +263,7 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/controllers/comments_controller.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/controllers/comments_controller.rb": [
         1,
         null,
         1,
@@ -289,19 +289,19 @@
         null,
         null
       ],
-      "/Users/Lauren/HabiChat/app/channels/application_cable/channel.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/Lauren/HabiChat/app/channels/application_cable/connection.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/Lauren/HabiChat/app/channels/messages_channel.rb": [
+      "/Users/KateLoschinina/Workspace/MakersAcademy/HabiChat/app/channels/messages_channel.rb": [
         0,
         0,
         0,
@@ -309,6 +309,6 @@
         0
       ]
     },
-    "timestamp": 1488478708
+    "timestamp": 1488497569
   }
 }
